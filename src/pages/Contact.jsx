@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/contactStyles.css";
 
 const Contact = () => {
-  const phoneNumber = "3234816213";
+  const phoneNumber = "3001055840";
   const email = "restrepoedwin172819@gmail.com";
 
   return (
