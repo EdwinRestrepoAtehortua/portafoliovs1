@@ -1,0 +1,140 @@
+/* Contenedor principal */
+.home-container {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección para apilar los elementos en pantallas pequeñas */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-color: #1e1e2f;
+    overflow: hidden;
+}
+
+/* Fondo animado */
+.home-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #1e1e2f, #f39c12, #3498db);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Contenido centrado */
+.home-content {
+    text-align: center;
+    z-index: 1;
+    padding: 20px;
+    color: white;
+    max-width: 90%; /* Asegura que el contenido no se desborde */
+}
+
+/* Estilo de la foto de perfil */
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #f39c12;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo del título */
+.home-title {
+    font-size: 2.5rem; /* Reduce el tamaño del título en pantallas pequeñas */
+    margin-bottom: 20px;
+    color: #f39c12;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Descripción */
+.home-description {
+    font-size: 1.2rem; /* Reduce el tamaño del texto en pantallas pequeñas */
+    margin-bottom: 30px;
+    color: #ecf0f1;
+    line-height: 1.8;
+}
+
+/* Botón */
+.home-button {
+    padding: 10px 25px;
+    font-size: 1rem;
+    color: white;
+    background-color: #f39c12;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(243, 156, 18, 0.5);
+    transition: all 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #e67e22;
+    box-shadow: 0 6px 20px rgba(230, 126, 34, 0.7);
+    transform: scale(1.1);
+}
+
+/* Estilos para el reloj */
+.clock {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Estilo para el texto que invita a jugar */
+.home-invite {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #ecf0f1;
+    text-align: center;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 600px) {
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+    .home-title {
+        font-size: 2rem;
+    }
+    .home-description {
+        font-size: 1rem;
+    }
+    .home-button {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+    .clock {
+        font-size: 14px;
+    }
+}

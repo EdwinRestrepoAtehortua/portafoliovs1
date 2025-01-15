@@ -1,0 +1,108 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1e1e2f; /* Fondo oscuro */
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Fondo animado */
+  .skills-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #1e1e2f, #f39c12);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    z-index: -1;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Contenedor principal */
+  .skills-container {
+    padding: 100px 20px 20px; /* Espaciado superior para evitar que el título sea tapado */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  /* Título */
+  .skills-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: #f39c12;
+    border-bottom: 3px solid #f39c12;
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+  
+  /* Sección de habilidades */
+  .skills-section {
+    margin-bottom: 40px;
+  }
+  
+  .skills-subtitle {
+    font-size: 2rem;
+    color: #f39c12;
+    margin-bottom: 20px;
+  }
+  
+  /* Lista de habilidades */
+  .skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .skill-item {
+    background: #1e1e2f;
+    padding: 20px;
+    border: 2px solid #f39c12;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .skill-item:hover {
+    background-color: #f39c12;
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .skills-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .skill-item {
+      width: 90%;
+    }
+  }

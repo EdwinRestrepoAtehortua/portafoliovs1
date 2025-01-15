@@ -1,0 +1,94 @@
+/* Contenedor principal */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    width: 100vw; /* Ocupa toda la anchura de la ventana */
+    position: relative;
+    background-color: #1e1e2f; /* Fondo oscuro */
+    overflow: hidden;
+  }
+  
+  /* Fondo animado */
+  .contact-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #1e1e2f, #f39c12);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    z-index: -1; /* Coloca el fondo detrás del contenido */
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Contenido principal */
+  .contact-content {
+    text-align: center;
+    z-index: 1; /* Asegura que el contenido esté encima del fondo */
+    color: white;
+    padding: 20px;
+    max-width: 600px;
+  }
+  
+  /* Título */
+  .contact-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f39c12;
+  }
+  
+  /* Descripción */
+  .contact-description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  
+  /* Información de contacto */
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Ítem de contacto */
+  .contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-link:hover {
+    color: #f39c12;
+  }
+  
+  /* Íconos */
+  .contact-icon {
+    width: 30px;
+    height: 30px;
+  }
+  

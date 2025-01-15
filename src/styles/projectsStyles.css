@@ -1,0 +1,81 @@
+/* Ajustes generales */
+.projects-container {
+    padding: 100px 0 20px; /* Elimina los márgenes laterales */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    text-align: center;
+}
+
+/* Lista de proyectos */
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Espaciado uniforme */
+    gap: 20px;
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+}
+
+/* Tarjetas de proyectos */
+.project-card {
+    flex: 1; /* Permite que cada tarjeta se expanda */
+    min-width: 300px; /* Ancho mínimo para tarjetas pequeñas */
+    max-width: 100%; /* Ocupa todo el ancho disponible */
+    background: #1e1e2f;
+    padding: 20px;
+    border: 2px solid #f39c12;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.project-card:hover {
+    background-color: #f39c12;
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Títulos de proyectos */
+.project-title {
+    font-size: 1.8rem;
+    color: #f39c12;
+    margin-bottom: 20px;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+    .project-card {
+        flex: 1 1 calc(50% - 20px); /* Ocupa la mitad del ancho menos el gap */
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-list {
+        flex-direction: column;
+        align-items: stretch; /* Asegura que ocupen el ancho completo */
+    }
+
+    .project-card {
+        flex: 1 1 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
+    }
+}
+
+
+
+/* Títulos de proyectos */
+.project-title {
+    font-size: 1.8rem;
+    color: #f39c12;
+    margin-bottom: 20px;
+    transition: color 0.3s ease; /* Transición para un cambio suave */
+  }
+  
+  /* Cambio de color al pasar el puntero sobre la tarjeta */
+  .project-card:hover .project-title {
+    color: #f4f5f5; /* Azul para un buen contraste */
+  }
